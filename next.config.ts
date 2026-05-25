@@ -2,8 +2,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: "export",
   distDir: "out",
-  basePath: "/crewspace-website",
-  assetPrefix: "/crewspace-website",
+
   images: { unoptimized: true },
 };
 export default nextConfig;
