@@ -62,27 +62,27 @@ export default function Navbar() {
                       className="absolute top-full left-0 mt-1 w-56 rounded-xl border border-[#2a2a28] bg-[#141413] shadow-2xl overflow-hidden"
                     >
                       {link.children.map((child) => (
-                        <a
+                        <Link
                           key={child.href}
                           href={child.href}
                           className="block px-4 py-3 hover:bg-[#1c1c1b] transition-colors border-b border-[#2a2a28] last:border-0"
                         >
                           <div className="text-sm font-medium text-[#faf9f5]">{child.label}</div>
                           <div className="text-xs text-[#5c5a54]">{child.desc}</div>
-                        </a>
+                        </Link>
                       ))}
                     </motion.div>
                   )}
                 </AnimatePresence>
               </div>
             ) : (
-              <a
+              <Link
                 key={link.label}
                 href={link.href}
                 className="px-3 py-2 text-sm text-[#5c5a54] hover:text-[#faf9f5] transition-colors duration-200"
               >
                 {link.label}
-              </a>
+              </Link>
             )
           )}
           <a
@@ -118,9 +118,9 @@ export default function Navbar() {
               <Link href="/" onClick={() => setOpen(false)} className="text-sm text-[#5c5a54] hover:text-[#faf9f5] py-2 transition-colors">Home</Link>
               <div className="text-xs font-semibold text-[#3d3d3a] uppercase tracking-wider mt-2">Features</div>
               {navLinks.find(l => l.children)?.children?.map((child) => (
-                <a key={child.href} href={child.href} onClick={() => setOpen(false)} className="text-sm text-[#5c5a54] hover:text-[#faf9f5] py-2 pl-3 transition-colors">
+                <Link key={child.href} href={child.href} onClick={() => setOpen(false)} className="text-sm text-[#5c5a54] hover:text-[#faf9f5] py-2 pl-3 transition-colors">
                   {child.label}
-                </a>
+                </Link>
               ))}
               <Link href="/#open-source" onClick={() => setOpen(false)} className="text-sm text-[#5c5a54] hover:text-[#faf9f5] py-2 transition-colors">Open Source</Link>
               <a

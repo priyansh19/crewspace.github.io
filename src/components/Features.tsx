@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import {
   Bot,
   Building2,
@@ -120,12 +121,14 @@ export default function Features() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {features.map((feature) => (
-            <motion.a
+            <motion.div
               key={feature.title}
-              href={feature.href}
               variants={itemVariants}
-              className="group p-6 rounded-2xl border border-[#2a2a28] bg-[#141413] hover:bg-[#1c1c1b] hover:border-[#3d3d3a] transition-all duration-300 block"
             >
+              <Link
+                href={feature.href}
+                className="group p-6 rounded-2xl border border-[#2a2a28] bg-[#141413] hover:bg-[#1c1c1b] hover:border-[#3d3d3a] transition-all duration-300 block"
+              >
               <div className="w-10 h-10 rounded-lg bg-[#cc785c]/10 flex items-center justify-center mb-4 group-hover:bg-[#cc785c]/20 transition-colors">
                 <feature.icon className="w-5 h-5 text-[#cc785c]" />
               </div>
@@ -136,7 +139,8 @@ export default function Features() {
               <p className="text-sm text-[#5c5a54] leading-relaxed">
                 {feature.description}
               </p>
-            </motion.a>
+              </Link>
+            </motion.div>
           ))}
         </motion.div>
       </div>

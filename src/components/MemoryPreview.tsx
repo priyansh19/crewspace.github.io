@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { Brain, MessageSquare, FileText, Network, ArrowRight } from "lucide-react";
 
 const steps = [
@@ -54,13 +55,13 @@ export default function MemoryPreview() {
               ))}
             </div>
 
-            <a
+            <Link
               href="/memory"
               className="inline-flex items-center gap-2 text-sm font-medium text-[#cc785c] hover:text-[#e8a48a] transition-colors"
             >
               Explore the Memory Graph
               <ArrowRight className="w-4 h-4" />
-            </a>
+            </Link>
           </motion.div>
 
           {/* Right: Visual diagram */}

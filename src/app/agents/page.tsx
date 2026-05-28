@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+
 import { Zap } from "lucide-react";
 
 const adapters = [
@@ -69,7 +70,7 @@ export default function AgentsPage() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: a.color }}>
-                    <img src="/logos/crewspace.svg" alt="CrewSpace" className="w-7 h-7" style={{ filter: "brightness(0) invert(1)" }} />
+                    <img src="/crewspace.github.io/logos/crewspace.svg" alt="CrewSpace" className="w-7 h-7" style={{ filter: "brightness(0) invert(1)" }} />
                   </div>
                   <div>
                     <h3 className="font-semibold text-[#faf9f5]">{a.name}</h3>

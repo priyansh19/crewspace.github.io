@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 
+
 const agents = [
   { name: "Claude", role: "Strategist", color: "#cc785c", adapter: "claude-local", tagline: "Deep reasoning & long-context planning" },
   { name: "Codex", role: "Engineer", color: "#4daa62", adapter: "codex-local", tagline: "Code generation & technical implementation" },
@@ -28,7 +29,7 @@ function AgentAvatar({ agent, index }: { agent: typeof agents[0]; index: number 
         >
           <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-white to-transparent" />
           <img
-            src="/logos/crewspace.svg"
+            src="/crewspace.github.io/logos/crewspace.svg"
             alt="CrewSpace"
             className="relative z-10 w-10 h-10"
             style={{ filter: "brightness(0) invert(1)" }}
