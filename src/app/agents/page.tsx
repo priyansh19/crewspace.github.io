@@ -68,8 +68,8 @@ export default function AgentsPage() {
                 className="p-6 rounded-2xl border border-[#2a2a28] bg-[#0a0a0a] hover:border-[#3d3d3a] transition-colors"
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-xl flex items-center justify-center text-lg font-bold text-white" style={{ backgroundColor: a.color }}>
-                    {a.name[0]}
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: a.color }}>
+                    <img src="/logos/crewspace.svg" alt="CrewSpace" className="w-7 h-7" style={{ filter: "brightness(0) invert(1)" }} />
                   </div>
                   <div>
                     <h3 className="font-semibold text-[#faf9f5]">{a.name}</h3>

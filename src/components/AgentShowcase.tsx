@@ -3,12 +3,12 @@
 import { motion } from "framer-motion";
 
 const agents = [
-  { name: "Claude", role: "Strategist", color: "#cc785c", initials: "C", adapter: "claude-local", tagline: "Deep reasoning & long-context planning" },
-  { name: "Codex", role: "Engineer", color: "#4daa62", initials: "Co", adapter: "codex-local", tagline: "Code generation & technical implementation" },
-  { name: "Gemini", role: "Analyst", color: "#5b8def", initials: "G", adapter: "gemini-local", tagline: "Multimodal analysis & data synthesis" },
-  { name: "Kimi", role: "Researcher", color: "#9b59b6", initials: "K", adapter: "kimi-local", tagline: "Long-document research & summarization" },
-  { name: "Cursor", role: "Developer", color: "#e67e22", initials: "Cu", adapter: "cursor-local", tagline: "IDE-integrated coding assistant" },
-  { name: "OpenClaw", role: "Gateway", color: "#2ecc71", initials: "O", adapter: "openclaw-gateway", tagline: "HTTP gateway for remote agent pools" },
+  { name: "Claude", role: "Strategist", color: "#cc785c", adapter: "claude-local", tagline: "Deep reasoning & long-context planning" },
+  { name: "Codex", role: "Engineer", color: "#4daa62", adapter: "codex-local", tagline: "Code generation & technical implementation" },
+  { name: "Gemini", role: "Analyst", color: "#5b8def", adapter: "gemini-local", tagline: "Multimodal analysis & data synthesis" },
+  { name: "Kimi", role: "Researcher", color: "#9b59b6", adapter: "kimi-local", tagline: "Long-document research & summarization" },
+  { name: "Cursor", role: "Developer", color: "#e67e22", adapter: "cursor-local", tagline: "IDE-integrated coding assistant" },
+  { name: "OpenClaw", role: "Gateway", color: "#2ecc71", adapter: "openclaw-gateway", tagline: "HTTP gateway for remote agent pools" },
 ];
 
 function AgentAvatar({ agent, index }: { agent: typeof agents[0]; index: number }) {
@@ -23,14 +23,16 @@ function AgentAvatar({ agent, index }: { agent: typeof agents[0]; index: number 
       <div className="p-6 rounded-2xl border border-[#2a2a28] bg-[#141413] hover:bg-[#1c1c1b] hover:border-[#3d3d3a] transition-all duration-300 text-center">
         {/* Avatar face */}
         <div
-          className="w-20 h-20 mx-auto mb-4 rounded-2xl flex items-center justify-center text-2xl font-bold text-white relative overflow-hidden"
+          className="w-20 h-20 mx-auto mb-4 rounded-2xl flex items-center justify-center relative overflow-hidden"
           style={{ backgroundColor: agent.color }}
         >
           <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-white to-transparent" />
-          <span className="relative z-10">{agent.initials}</span>
-          {/* Robot antenna */}
-          <div className="absolute top-1 left-1/2 -translate-x-1/2 w-1 h-3 bg-white/30 rounded-full" />
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2 h-2 bg-white/50 rounded-full" />
+          <img
+            src="/logos/crewspace.svg"
+            alt="CrewSpace"
+            className="relative z-10 w-10 h-10"
+            style={{ filter: "brightness(0) invert(1)" }}
+          />
         </div>
 
         <h3 className="text-lg font-semibold text-[#faf9f5] mb-1">{agent.name}</h3>
