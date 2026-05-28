@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import { Menu, X, Bot, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -31,7 +31,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5 group">
           <div className="w-8 h-8 rounded-lg bg-[#cc785c] flex items-center justify-center">
-            <Bot className="w-5 h-5 text-white" />
+            <img src="/crewspace.github.io/logos/crewspace.svg" alt="CrewSpace" className="w-5 h-5" style={{ filter: "brightness(0) invert(1)" }} />
           </div>
           <span className="text-lg font-semibold tracking-tight text-[#faf9f5]">
             CrewSpace

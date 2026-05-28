@@ -1,6 +1,6 @@
 "use client";
 
-import { Bot, Code2, MessageCircle } from "lucide-react";
+import { Code2, MessageCircle } from "lucide-react";
 
 const links = {
   Product: [
@@ -29,7 +29,7 @@ export default function Footer() {
           <div className="md:col-span-1">
             <a href="#" className="flex items-center gap-2.5 mb-4">
               <div className="w-8 h-8 rounded-lg bg-[#cc785c] flex items-center justify-center">
-                <Bot className="w-5 h-5 text-white" />
+                <img src="/crewspace.github.io/logos/crewspace.svg" alt="CrewSpace" className="w-5 h-5" style={{ filter: "brightness(0) invert(1)" }} />
               </div>
               <span className="text-lg font-semibold text-[#faf9f5]">
                 CrewSpace
